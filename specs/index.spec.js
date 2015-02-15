@@ -15,9 +15,13 @@
 
 var expect = require('expect.js');
 
-describe('The cahoots-api-client', function suite () {
-    it('should ...', function test (done) {
-        expect(true).to.be(true);
+var services = require('../');
+
+describe('The cahoots-api-client service factory', function suite () {
+    it('should be able to return a service', function test (done) {
+        var service = services('person');
+
+        expect(service.findAll).not.to.be(undefined);
 
         done();
     });

@@ -4,7 +4,7 @@
   "description": "The JavaScript library for communicating with the cahoots-api.",
   "main": "index.js",
   "scripts": {
-    "test": "gulp",
+    "test": "gulp test",
     "lint": "gulp lint",
     "specs": "gulp specs",
     "checkstyle": "gulp checkstyle",
@@ -62,5 +62,10 @@
     "run-sequence": "^1.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "mandatory": "^1.0.0",
+    "verror": "^1.6.0",
+    "xhr": "^2.0.1"
   }
 }

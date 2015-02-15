@@ -74,6 +74,10 @@ gulp.task('browserify', function build () {
     return bundle();
 });
 
+gulp.task('test', function test (callback) {
+    return sequence('lint', 'checkstyle', 'specs', callback);
+});
+
 gulp.task('default', function defaultTask (callback) {
     return sequence('lint', 'checkstyle', 'specs', 'browserify', callback);
 });
