@@ -19,9 +19,17 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var mocha = require('gulp-mocha');
+var uglify = require('gulp-uglify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var browserify = require('browserify');
 var sequence = require('run-sequence');
 
+var pkg = require('./package.json');
+
 var paths = {};
+
+paths.build = path.join(__dirname, 'build');
 
 paths.sources = [
     path.join(__dirname, '*.js'),
@@ -48,6 +56,24 @@ gulp.task('checkstyle', function checkstyle () {
         .pipe(jscs());
 });
 
+gulp.task('browserify', function build () {
+    var bundler = browserify({
+        entries: [path.join(__dirname, pkg.main)],
+        standalone: 'cahoots.api'
+    });
+
+    var bundle = function b () {
+        return bundler
+            .bundle()
+            .pipe(source(pkg.name + '-' + pkg.version + '.js'))
+            .pipe(buffer())
+            .pipe(uglify())
+            .pipe(gulp.dest(paths.build));
+    };
+
+    return bundle();
+});
+
 gulp.task('default', function defaultTask (callback) {
-    return sequence('lint', 'checkstyle', 'specs', callback);
+    return sequence('lint', 'checkstyle', 'specs', 'browserify', callback);
 });
