@@ -1,0 +1,59 @@
+{
+  "name": "cahoots-api-client",
+  "version": "1.0.0",
+  "description": "The JavaScript library for communicating with the cahoots-api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp",
+    "lint": "gulp lint",
+    "specs": "gulp specs",
+    "checkstyle": "gulp checkstyle"
+  },
+  "pre-commit": [
+    "lint",
+    "checkstyle",
+    "specs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cahoots-extension/api-client.git"
+  },
+  "keywords": [
+    "cahoots",
+    "api",
+    "client"
+  ],
+  "author": "cahoots.pw",
+  "contributors": [
+    {
+      "name": "Alexander Barnickel",
+      "email": "alex@alba.io",
+      "url": "http://cahoots.pw"
+    },
+    {
+      "name": "Jonas Bergmeier",
+      "email": "jonas.bergmeier@gmail.com",
+      "url": "http://cahoots.pw"
+    },
+    {
+      "name": "André König",
+      "email": "andre.koenig@posteo.de",
+      "url": "http://andrekoenig.info"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cahoots-extension/api-client/issues"
+  },
+  "homepage": "https://github.com/cahoots-extension/api-client",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "gulp": "^3.8.11",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0",
+    "pre-commit": "^1.0.4",
+    "run-sequence": "^1.0.2"
+  }
+}
