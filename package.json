@@ -64,8 +64,8 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "dependencies": {
+    "http-https": "^1.0.0",
     "mandatory": "^1.0.0",
-    "verror": "^1.6.0",
-    "xhr": "^2.0.1"
+    "verror": "^1.6.0"
   }
 }
