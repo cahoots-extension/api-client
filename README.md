@@ -1,4 +1,4 @@
-# cahoots-api-client
+# cahoots-api-client [![Build Status](https://travis-ci.org/cahoots-extension/api-client.svg?branch=master)](https://travis-ci.org/cahoots-extension/api-client)
 
 This JavaScript library provides an easy-to-use access to the [cahoots.pw](http://cahoots.pw) RESTful API for the browser or [io.js](https://iojs.org) / [Node.js](https://nodejs.org) environment.
 
