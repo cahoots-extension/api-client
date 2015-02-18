@@ -1,6 +1,6 @@
 {
   "name": "cahoots-api-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The JavaScript library for communicating with the cahoots-api.",
   "main": "index.js",
   "scripts": {
