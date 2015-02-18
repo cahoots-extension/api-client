@@ -33,4 +33,19 @@ describe('The OrganizationService', function suite () {
 
         service.findAll(onFind);
     });
+
+    it('should be able to find organizations by multiple ids', function test (done) {
+        var service = services('organization');
+
+        function onFind (err, organizations) {
+            expect(err).not.to.be(null);
+            expect(err.name).to.be('NotFoundError');
+
+            expect(organizations).to.be(undefined);
+
+            done();
+        }
+
+        service.findByIds([1, 2, 3], onFind);
+    });
 });
