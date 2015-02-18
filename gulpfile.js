@@ -67,7 +67,7 @@ gulp.task('browserify', function build () {
         return bundler
             .on('error', gutil.log.bind(gutil, 'Browserify Error'))
             .bundle()
-            .pipe(source(pkg.name + '-' + pkg.version + '.js'))
+            .pipe(source(pkg.name + '.min.js'))
             .pipe(buffer())
             .pipe(uglify())
             .pipe(gulp.dest(paths.build));
