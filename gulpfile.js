@@ -16,6 +16,7 @@
 var path = require('path');
 
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var mocha = require('gulp-mocha');
@@ -64,6 +65,7 @@ gulp.task('browserify', function build () {
 
     var bundle = function b () {
         return bundler
+            .on('error', gutil.log.bind(gutil, 'Browserify Error'))
             .bundle()
             .pipe(source(pkg.name + '-' + pkg.version + '.js'))
             .pipe(buffer())
