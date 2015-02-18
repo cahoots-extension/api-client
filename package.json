@@ -61,6 +61,7 @@
     "jshint-stylish": "^1.0.0",
     "pre-commit": "^1.0.4",
     "run-sequence": "^1.0.2",
+    "shmock": "^0.7.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"
   },
