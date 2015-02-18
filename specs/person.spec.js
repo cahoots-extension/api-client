@@ -34,4 +34,20 @@ describe('The PersonService', function suite () {
         service.findAll(onFind);
     });
 
+    it('should be able to find a person by id', function test (done) {
+        var service = services('person');
+
+        function onFind (err, person) {
+            expect(err).not.to.be(null);
+
+            expect(err.name).to.be('NotFoundError');
+
+            expect(person).to.be(undefined);
+
+            done();
+        }
+
+        service.findById('foo', onFind);
+    });
+
 });
