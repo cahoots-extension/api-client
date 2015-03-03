@@ -117,7 +117,7 @@ function onFindAll (err, organizations) {
     console.log(organizations);
 }
 
-service.findByAll(onFindAll);
+service.findAll(onFindAll);
 ```
 
 ##### findById(id, callback)
