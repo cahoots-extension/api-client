@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:cahoots-extension/api-client.git"
+    "url": "git@github.com:getcahoots/api-client.git"
   },
   "keywords": [
     "cahoots",
@@ -46,9 +46,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cahoots-extension/api-client/issues"
+    "url": "https://github.com/getcahoots/api-client/issues"
   },
-  "homepage": "https://github.com/cahoots-extension/api-client",
+  "homepage": "https://github.com/getcahoots/api-client",
   "devDependencies": {
     "browserify": "^8.1.3",
     "expect.js": "^0.3.1",

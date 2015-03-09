@@ -1,4 +1,4 @@
-# cahoots-api-client [![Build Status](https://travis-ci.org/cahoots-extension/api-client.svg?branch=master)](https://travis-ci.org/cahoots-extension/api-client)
+# cahoots-api-client [![Build Status](https://travis-ci.org/getcahoots/api-client.svg?branch=master)](https://travis-ci.org/getcahoots/api-client)
 
 This JavaScript library provides an easy-to-use access to the [cahoots.pw](http://cahoots.pw) RESTful API for the browser or [io.js](https://iojs.org) / [Node.js](https://nodejs.org) environment.
 
@@ -100,7 +100,7 @@ service.findById('ad02fa9db0d3a22e1c7827060ac3fb0107495f0f', onFind);
 
 #### Organization
 
-An organization represents an entity to which the persons can have relationships. Those relationships are defined within the respective person objects as `id's` (see the [`cahoots`](https://github.com/cahoots-extension/api/wiki#persons) attribute for further information).
+An organization represents an entity to which the persons can have relationships. Those relationships are defined within the respective person objects as `id's` (see the [`cahoots`](https://github.com/getcahoots/api/wiki#persons) attribute for further information).
 
 ##### findAll(callback)
 
