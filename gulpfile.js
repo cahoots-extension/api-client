@@ -21,6 +21,7 @@ var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var mocha = require('gulp-mocha');
 var uglify = require('gulp-uglify');
+var header = require('gulp-header');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
@@ -29,6 +30,14 @@ var sequence = require('run-sequence');
 var pkg = require('./package.json');
 
 var paths = {};
+
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * @license <%= pkg.license %>',
+  ' */',
+  ''].join('\n');
 
 paths.build = path.join(__dirname, 'build');
 
@@ -70,6 +79,7 @@ gulp.task('browserify', function build () {
             .pipe(source(pkg.name + '.min.js'))
             .pipe(buffer())
             .pipe(uglify())
+            .pipe(header(banner, {pkg: pkg}))
             .pipe(gulp.dest(paths.build));
     };
 
